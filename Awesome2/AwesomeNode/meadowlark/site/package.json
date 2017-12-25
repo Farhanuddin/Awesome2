@@ -1,0 +1,22 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "rehan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express3-handlebars": "^0.5.2"
+  }
+}
