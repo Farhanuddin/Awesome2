@@ -5,6 +5,8 @@ import { Hero } from '../hero';
 //Importing mock hero data service
 import {HEROES} from '../mock-heroes';
 
+//Importing heroes data service
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -13,18 +15,26 @@ import {HEROES} from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private heroService: HeroService) { }
 
   ngOnInit() {
+    //calling hero service to get all heroes
+    this.getHeroes();
   }
 
   //SelectedHero variale holder for storing clicked hero object details
   selectedHero:Hero;
 
-  heroes = HEROES;
+  //defining variable for heries which we are getting from service.
+  heroes: Hero[];
 
   //onSelect Method on which Hero object datatype is being passed.
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+  }
+
+  //function to retrive heroes from the service - synchrounous function
+  getHeroes() : void {
+    this.heroes = this.heroService.getHeroes();
   }
 }
