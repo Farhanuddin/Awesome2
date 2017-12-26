@@ -35,6 +35,7 @@ export class HeroesComponent implements OnInit {
 
   //function to retrive heroes from the service - synchrounous function
   getHeroes() : void {
-    this.heroes = this.heroService.getHeroes();
+     this.heroService.getHeroes()
+          .subscribe(heroes => this.heroes = heroes);
   }
 }
