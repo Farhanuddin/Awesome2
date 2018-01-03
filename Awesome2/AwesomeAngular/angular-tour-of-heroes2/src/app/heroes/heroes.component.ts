@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 //Imporitng heroes object so we can use it as a data type in this program.
 import { Hero } from '../hero';
 
-//Importing mock hero data service
-import {HEROES} from '../mock-heroes';
-
 //Importing heroes data service
 import { HeroService } from '../hero.service';
 
